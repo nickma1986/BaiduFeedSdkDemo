@@ -1,0 +1,35 @@
+apply plugin: 'com.android.application'
+apply plugin: 'mtj-circle-plugin'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.baidusdktest"
+        minSdkVersion 18
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:support-v4:+'
+    testImplementation 'junit:junit:4.12'
+}
+
+MtjCirclePluginConfig {
+    // 设置appkey，必须设置，否则插件使用无效
+    appkey = '906770434b'
+    // 设置debug 开关，默认关闭，如果需要查看日志则打开开关（true），建议正式版关闭以避免影响性能
+    debug = false
+    // 默认启动此插件，如果开发者不需要可以禁用（false）
+    enabled = true
+}
