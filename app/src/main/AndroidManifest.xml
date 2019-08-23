@@ -29,6 +29,12 @@
         </activity>
         <activity android:name=".RecyclerActivity">
         </activity>
+        <activity android:name=".RecyclerFragmentActivity">
+        </activity>
+        <activity android:name=".ListViewFragmentActivity">
+        </activity>
+        <activity android:name=".ListViewActivity">
+        </activity>
 
         <!-- 您从百度网站获取的APP KEY，根据实际您的APP申请的APP_KEY进行修改 -->
         <meta-data
